@@ -1,34 +1,36 @@
 
 import PLAYOFFS from 'playoffs';
+import {matchesWeek11, matchesWeek12, matchesWeek13, matchesWeek14} from schedules;
 
+//resets the total number of playoff visits from the last simulation
 resetWinCounts();
-
-
 
 let totalGames = 11;
 // determine winner of each game
-function determineWinner(matches) {
-      // loop through each map
-  for (let i=0; i<matches.length; i++) {
+const determineWinner = matches => {
+    matches.forEach(match=> {
       // find each player and return points
-    let playerOneStrength= locateStrength(matches[i].playerOne)/totalGames;
-    let playerTwoStrength= locateStrength(matches[i].playerTwo)/totalGames;
-    let relativeStrengthDifferential = (playerOneStrength - playerTwoStrength)/8;
-    let playerOneResult = (Math.random()*100);
-  // give win to winner of game
-    if (playerOneResult + relativeStrengthDifferential >= 50) {
-      locateAndAdd(matches[i].playerOne) //
-    } else 
-      locateAndAdd(matches[i].playerTwo)
-  }
+      let playerOneStrength= getPoints(match.playerOne)/totalGames;
+      let playerTwoStrength= getPoints(match.playerTwo)/totalGames;
+      let relativeStrengthDifferential = (playerOneStrength - playerTwoStrength)/4;
+      let playerOneResult = (Math.random()*100);
+    // give win to winner of game
+      if (playerOneResult + relativeStrengthDifferential >= 50) {
+        locateAndAdd(match.playerOne) //
+      } else 
+        locateAndAdd(match.playerTwo)
+      })
 }
 
-function locateStrength (stringPlayerName) {
+function getPoints (stringPlayerName) {
   //take stringPlayerName look for matching key-value in LEAGUE
-    for (let i=0; i<LEAGUE.length; i++) {
-    if (stringPlayerName===LEAGUE[i].playerName) {
-return LEAGUE[i].points;
-  }}}
+  LEAGUE.forEach(player => {
+    if(stringPlayerName === player.playerName) {
+      return player.points;
+    }
+  })
+}
+
 
 function locateAndAdd(stringPlayerName) {
 //take stringPlayerName look for matching key-value in LEAGUE
@@ -93,63 +95,63 @@ function resetWinCounts() {
  LEAGUE = [
   {
     playerName: 'Matt',
-    wins: 11,
-    points: 1535
+    wins: 7,
+    points: (1074 + 131)
   },
   {
     playerName: 'Kevin',
-    wins: 6,
-    points: 1452
+    wins: 4,
+    points: (1125 + 83)
   },
   {
     playerName: 'Kate',
-    wins: 4,
-    points: 1073
+    wins: 5,
+    points: (830 + 92)
   },
  {
    playerName: 'Johnny',
-   wins: 9,
-   points: 1392
+   wins: 4,
+   points: (1012 + 136)
  }, 
  {
   playerName: 'Kaitlin',
-  wins: 6,
-  points: 1501
+  wins: 7,
+  points: (1178 + 90)
 }, 
 {
   playerName: 'Sean',
-  wins: 7,
-  points: 1542
+  wins: 4,
+  points: (853 + 82)
 }, 
 {
   playerName: 'Shannon',
-  wins: 8,
-  points: 1268
+  wins: 5,
+  points: (905 + 91)
 }, 
 {
   playerName: 'Meg',
-  wins: 6,
-  points: 1220
+  wins: 5,
+  points: (1034 + 91)
 }, 
 {
   playerName: 'David',
-  wins: 3,
-  points: 1126
+  wins: 6,
+  points: (1075 + 80)
 }, 
 {
   playerName: 'Mike',
   wins: 4,
-  points: 1272
+  points: (1054 + 84)
 }, 
 {
   playerName: 'Karen',
-  wins: 6,
-  points: 1280
+  wins: 7,
+  points: (1047 + 103) 
 }, 
 {
   playerName: 'Colleen',
   wins: 2,
-  points: 1004
+  points: (925 + 91)
 }, 
 ];
 } 
