@@ -69,29 +69,29 @@ let PLAYOFFS = [
 let matchesWeek11 = [
   {
    
-    playerOne:'Johnny',
+    playerOne:'Kate',
     playerTwo:'Matt'
   }, 
   {
    
     playerOne:'Kevin',
-    playerTwo:'Sean'
+    playerTwo:'Karen'
+  }, 
+  {
+    playerOne:'Sean',
+    playerTwo:'David'
   }, 
   {
     playerOne:'Kaitlin',
     playerTwo:'Colleen'
   }, 
   {
-    playerOne:'David',
-    playerTwo:'Kate'
-  }, 
-  {
     playerOne:'Shannon',
-    playerTwo:'Meg'
+    playerTwo:'Mike'
   }, 
   {
-    playerOne:'Karen',
-    playerTwo:'Mike'
+    playerOne:'Johnny',
+    playerTwo:'Meg'
   }, 
 
 ];
@@ -100,7 +100,7 @@ let matchesWeek11 = [
 let matchesWeek12 = [
   {
    
-    playerOne:'Mike',
+    playerOne:'Sean',
     playerTwo:'Matt'
   }, 
   {
@@ -110,19 +110,19 @@ let matchesWeek12 = [
   }, 
   {
     playerOne:'David',
-    playerTwo:'Shannon'
-  }, 
-  {
-    playerOne:'Meg',
     playerTwo:'Kate'
   }, 
   {
-    playerOne:'Karen',
+    playerOne:'Colleen',
+    playerTwo:'Karen'
+  }, 
+  {
+    playerOne:'Shannon',
     playerTwo:'Johnny'
   }, 
   {
-    playerOne:'Sean',
-    playerTwo:'Colleen'
+    playerOne:'Meg',
+    playerTwo:'Mike'
   }, 
 
 ];
@@ -130,29 +130,29 @@ let matchesWeek12 = [
 let matchesWeek13 = [
   {
    
-    playerOne:'Kate',
+    playerOne:'Johnny',
     playerTwo:'Matt'
   }, 
   {
    
-    playerOne:'David',
-    playerTwo:'Kaitlin'
-  }, 
-  {
     playerOne:'Kevin',
-    playerTwo:'Shannon'
-  }, 
-  {
-    playerOne:'Meg',
     playerTwo:'Mike'
   }, 
   {
     playerOne:'Sean',
-    playerTwo:'Johnny'
+    playerTwo:'Shannon'
+  }, 
+  {
+    playerOne:'David',
+    playerTwo:'Colleen'
+  }, 
+  {
+    playerOne:'Kaitlin',
+    playerTwo:'Meg'
   }, 
   {
     playerOne:'Karen',
-    playerTwo:'Colleen'
+    playerTwo:'Kate'
   }, 
 
 ];
