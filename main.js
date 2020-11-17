@@ -163,6 +163,8 @@ function simulateAndReset() {
   let numByUser = document.getElementById("userInput").value;
   let simulateCount = Number(numByUser);
   for (i=0; i<simulateCount; i++) {
+determineWinner(matchesWeek11);
+determineWinner(matchesWeek12);
 determineWinner(matchesWeek13);
 determineWinner(matchesWeek14);
 sortByWins(LEAGUE);
@@ -175,7 +177,7 @@ PLAYOFFS.sort(function (a, b) {
    return a.playoffCount - b.playoffCount;
 });
 console.log(PLAYOFFS);
-document.getElementById("div1").innerHTML= "<h2>Simulations Run:" + simulateCount + "</h2>";
+document.getElementById("div1").innerHTML= "<h2>Simulations Done:" + simulateCount + "</h2>";
 for (let i = 0; i<PLAYOFFS.length; i++) {
 document.getElementById("div1").innerHTML += 
 "<p>Name: <span style= 'color:blue; font-size:20px;'> " + PLAYOFFS[i].playerName+ "</span>--Playoff Berth Count: " + PLAYOFFS[i].playoffCount + " ---------Charlotte Count: " + PLAYOFFS[i].charlotteCount+ "</p>";
